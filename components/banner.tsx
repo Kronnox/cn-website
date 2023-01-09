@@ -14,7 +14,7 @@ const HeroPost = () => {
                                 Cube-Nation bietet dir mit seinem gut durchdachten und stetig weiterentwickelten Konzept ein Minecraft-Spielerlebnis, das du bald nicht mehr vermissen möchtest. Gemeinsam mit den Spielern haben wir seit 2011 einen der freundlichsten Minecraft-Server im deutschsprachigen Raum entwickelt. Zur Community gehört nicht nur das kompetente Server-Team, sondern selbstverständlich auch jeder einzelne Cube-Nation-Spieler!
                                 Denn erst die Community macht den Server zu dem, was er heute ist – nämlich zum Server mit dem Wohlfühleffekt!
                             </p>
-                            <p>
+                            <div>
                                 <div className="mt-12 flex space-x-2 justify-left">
                                     <button
                                         type="button"
@@ -31,7 +31,7 @@ const HeroPost = () => {
                                     > Unser Konzept
                                     </button>
                                 </div>
-                            </p>
+                            </div>
                         </div>
                     </Container>
                 </div>
