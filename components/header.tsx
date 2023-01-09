@@ -2,6 +2,8 @@ import { Popover, Transition } from '@headlessui/react'
 import classNames from "classnames";
 import {Fragment, useEffect, useState} from "react";
 import Container from "./container";
+import {RxDiscordLogo} from "react-icons/rx";
+import {BiCopy} from "react-icons/bi";
 
 const server = [
     {
@@ -78,14 +80,17 @@ const Header = () => {
                           <a href="#">
                               <span className="sr-only">Cube-Nation</span>
                               <img
-                                  className="h-10 w-auto"
+                                  className="w-10 h-10"
                                   src="/assets/cropped-cnlogoflat-4.png"
                                   alt=""
                               />
                           </a>
-                          <div className="ml-4 flex flex-col justify-around leading-4 font-bold">
-                              <span>cube-nation.de</span>
-                              <span className="text-green-600">11 / 50 Online</span>
+                          <div className="ml-4 flex flex-col justify-around leading-5 font-bold">
+                              <button className="inline-block px-1 pt-0.5 bg-green-600 text-white font-medium text-sm leading-tight uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out">
+                                  cube-nation.de
+                                  {/*<BiCopy className="inline-block h-3 ml-1 mb-0.5"/>*/}
+                              </button>
+                              <span className="text-black">11 / 50 Online</span>
                           </div>
                       </div>
                       <div className="-my-2 -mr-2 md:hidden">
@@ -96,19 +101,10 @@ const Header = () => {
                       </div>
                       <Popover.Group as="nav" className="hidden space-x-10 md:flex">
 
-                          <a href="#" className="text-lg font-bold black hover:text-gray-900">
-                              Home
-                          </a>
-
                           <Popover className="relative">
                               {({ open }) => (
                                   <>
-                                      <Popover.Button
-                                          className={classNames(
-                                              open ? 'text-gray-900' : 'black',
-                                              'group inline-flex items-center rounded-md text-lg font-bold hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
-                                          )}
-                                      >
+                                      <Popover.Button className="group inline-flex items-center rounded-md text-lg font-bold text-black hover:underline decoration-4 underline-offset-8 decoration-green-500 focus:outline-none">
                                           <span>Unsere Server</span>
                                       </Popover.Button>
 
@@ -156,22 +152,17 @@ const Header = () => {
                               )}
                           </Popover>
 
-                          <a href="#" className="text-lg font-bold black hover:text-gray-900">
+                          <a href="#" className="text-lg font-bold text-black hover:underline decoration-4 underline-offset-8 decoration-green-500">
                               Wiki
                           </a>
-                          <a href="#" className="text-lg font-bold black hover:text-gray-900">
+                          <a href="#" className="text-lg font-bold text-black hover:underline decoration-4 underline-offset-8 decoration-green-500">
                               Regeln
                           </a>
 
                           <Popover className="relative">
                               {({ open }) => (
                                   <>
-                                      <Popover.Button
-                                          className={classNames(
-                                              open ? 'text-gray-900' : 'black',
-                                              'group inline-flex items-center rounded-md text-lg font-bold hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
-                                          )}
-                                      >
+                                      <Popover.Button className="group inline-flex items-center rounded-md text-lg font-bold text-black hover:underline decoration-4 underline-offset-8 decoration-green-500 focus:outline-none">
                                           <span>FAQ</span>
                                       </Popover.Button>
 
@@ -228,12 +219,10 @@ const Header = () => {
                           </Popover>
                       </Popover.Group>
                       <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-                          <a href="#" role="button text-black">
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-7 h-7">
-                                  <path fill="currentColor"
-                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
-                              </svg>
-                          </a>
+                          <span className="hidden ld:inline leading-4 mr-4 text-right">Trete unserem <br/>Discord bei!</span>
+                          <button className="inline-block p-1 bg-indigo-500 text-white font-medium text-sm leading-tight uppercase rounded shadow-md hover:bg-indigo-600 hover:shadow-lg focus:bg-indigo-760 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-indigo-700 active:shadow-lg transition duration-150 ease-in-out">
+                              <RxDiscordLogo className="text-3xl text-white"/>
+                          </button>
                       </div>
                   </div>
               </div>
