@@ -5,17 +5,17 @@ const HeroPost = () => {
     return (
         <section>
             <div className="w-full bg-[url('/assets/banner/banner-1.png')]">
-                <div className="md:pt-32 pt-24 pb-10 mb-8 md:mb-16 bg-black bg-opacity-20 backdrop-blur-sm">
+                <div className="md:pt-32 pt-28 pb-10 mb-8 md:mb-16 bg-black bg-opacity-20 backdrop-blur-sm">
                     <Container>
                         <div className="md:my-24 md:mr-96 text-white">
-                            <h1 className="text-3xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8">Willkommen auf <span className="text-green-500">Cube-Nation</span>!</h1>
-                            <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight md:pr-8">Dem Minecraft Server mit dem Wohlfühleffekt.</h2>
-                            <p className="mt-12">
+                            <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8">Willkommen auf <span className="text-green-500">Cube-Nation</span>!</h1>
+                            <h2 className="text-2xl mt-2 md:mt-0 md:text-4xl font-bold tracking-tighter leading-tight md:pr-8">Dem Minecraft Server mit dem Wohlfühleffekt.</h2>
+                            <p className="mt-6 md:mt-12">
                                 Cube-Nation bietet dir mit seinem gut durchdachten und stetig weiterentwickelten Konzept ein Minecraft-Spielerlebnis, das du bald nicht mehr vermissen möchtest. Gemeinsam mit den Spielern haben wir seit 2011 einen der freundlichsten Minecraft-Server im deutschsprachigen Raum entwickelt. Zur Community gehört nicht nur das kompetente Server-Team, sondern selbstverständlich auch jeder einzelne Cube-Nation-Spieler!
                                 Denn erst die Community macht den Server zu dem, was er heute ist – nämlich zum Server mit dem Wohlfühleffekt!
                             </p>
                             <div>
-                                <div className="mt-12 flex space-x-2 justify-left">
+                                <div className="mt-6 md:mt-12 flex space-x-2 justify-left">
                                     <button
                                         type="button"
                                         data-mdb-ripple="true"
