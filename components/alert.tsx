@@ -9,7 +9,7 @@ type Props = {
 const Alert = ({ preview }: Props) => {
   return (
     <div
-      className="fixed w-full border-b bg-neutral-50 border-neutral-200 z-50"
+      className="fixed w-full border-b bg-neutral-50 border-neutral-200 z-50 hidden"
     >
       <Container>
         <div className="py-2 text-center text-sm">

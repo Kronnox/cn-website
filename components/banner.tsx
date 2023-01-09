@@ -5,9 +5,9 @@ const HeroPost = () => {
     return (
         <section>
             <div className="w-full bg-[url('/assets/banner/banner-1.png')]">
-                <div className="pt-32 pb-6 mb-8 md:mb-16 bg-black bg-opacity-20 backdrop-blur-sm">
+                <div className="md:pt-32 pt-24 pb-10 mb-8 md:mb-16 bg-black bg-opacity-20 backdrop-blur-sm">
                     <Container>
-                        <div className="my-24 mr-96 text-white">
+                        <div className="md:my-24 md:mr-96 text-white">
                             <h1 className="text-3xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8">Willkommen auf <span className="text-green-500">Cube-Nation</span>!</h1>
                             <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight md:pr-8">Dem Minecraft Server mit dem Wohlfühleffekt.</h2>
                             <p className="mt-12">
