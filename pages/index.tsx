@@ -10,6 +10,7 @@ import Post from '../interfaces/post'
 import Header from "../components/header";
 import Banner from "../components/banner";
 import Image from "next/image";
+import {BiCopy} from "react-icons/bi";
 
 type Props = {
   allPosts: Post[]
@@ -64,14 +65,14 @@ export default function Index({ allPosts }: Props) {
         <Container>
           <div className="hidden lg:flex relative justify-between w-full md:mb-16 -top-10">
             {servers.map(server => (
-            <div className="flex-1 flex p-6 rounded-lg bg-white/60 backdrop-blur-xl drop-shadow-md text-black h-min mx-8">
+            <div className="flex-1 flex p-6 rounded-lg bg-white/60 dark:bg-midnight-700/60 backdrop-blur-lg drop-shadow-md h-min mx-5">
               <img src="/assets/block-uni.png" alt="Block" className="w-20 h-20"/>
               <div className="ml-2">
                 <h5 className="text-xl leading-tight font-medium">{server.servername}</h5>
                 <h5 className="text-sm leading-tight font-medium mb-2.5">Version {server.version}</h5>
-                <button className="inline-block px-1 py-0.5 bg-gradient-to-r from-green-500 to-green-600 text-white font-medium text-sm leading-tight rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out">
+                <button className="inline-block px-1 py-0.5 bg-gradient-to-r from-cn-d to-cn text-white dark:text-black font-medium text-sm leading-tight rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out">
                   {server.address}
-                  {/*<BiCopy className="inline-block h-3 ml-1 mb-0.5"/>*/}
+                  <BiCopy className="inline-block h-3 ml-1 mb-0.5"/>
                 </button>
               </div>
             </div>
@@ -84,7 +85,7 @@ export default function Index({ allPosts }: Props) {
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
             </div>
 
-            <div className="hidden lg:block p-6 rounded-lg bg-gradient-to-r from-green-500 to-green-600 text-white drop-shadow-md max-w-sm h-min">
+            <div className="hidden lg:block p-6 rounded-lg bg-gradient-to-r from-cn-d to-cn text-white dark:text-black drop-shadow-md max-w-sm h-min">
               <h5 className="text-xl leading-tight font-medium mb-2">Top-Voter der Woche</h5>
               <div className="flex justify-center">
                 <ul className="rounded-lg w-96">
@@ -97,7 +98,7 @@ export default function Index({ allPosts }: Props) {
                     }
                     return 0
                   }).map((e, i) => (
-                      <li className={`px-6 py-2 w-full ${i < topVoter.length-1 && "border-b border-gray-200"}`}>
+                      <li className={`px-6 py-2 w-full ${i < topVoter.length-1 && "border-b border-white dark:border-black"}`}>
                         {e.username}: <span className="float-right">{e.votecount}</span>
                       </li>
                   ))}

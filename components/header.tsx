@@ -2,8 +2,7 @@ import { Popover, Transition } from '@headlessui/react'
 import classNames from "classnames";
 import {Fragment, useEffect, useState} from "react";
 import Container from "./container";
-import {RxDiscordLogo} from "react-icons/rx";
-import {BiCopy} from "react-icons/bi";
+import {FaDiscord} from "react-icons/fa";
 
 const server = [
     {
@@ -61,7 +60,7 @@ const Header = () => {
     useEffect(() => {
         const listener = () => {
             console.log(window.scrollY);
-            if (window.scrollY > 750) {
+            if (window.scrollY > 20) {
                 setAnimateHeader(true);
             } else setAnimateHeader(false);
         };
@@ -72,7 +71,7 @@ const Header = () => {
     }, []);
 
   return (
-      <Popover className={`fixed w-full bg-white z-40 trasition ease-in-out duration-500 ${animateHeader && "backdrop-filter backdrop-blur-lg bg-white/20"}`}>
+      <Popover className="fixed w-full bg-white/60 dark:bg-midnight/60 backdrop-filter backdrop-blur-lg z-40">
           <Container>
               <div className="mx-auto">
                   <div className={`flex items-center justify-between py-5 md:justify-start md:space-x-10 cartoon trasition ease-in-out duration-500`}>
@@ -86,11 +85,11 @@ const Header = () => {
                               />
                           </a>
                           <div className="ml-4 flex flex-col justify-around leading-5 font-bold">
-                              <button className="inline-block px-1 pt-0.5 bg-green-600 text-white font-medium text-sm leading-tight uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out">
+                              <button className="inline-block px-1 pt-0.5 bg-gradient-to-r from-cn-d to-cn text-white font-medium text-sm leading-tight uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out">
                                   cube-nation.de
                                   {/*<BiCopy className="inline-block h-3 ml-1 mb-0.5"/>*/}
                               </button>
-                              <span className="text-black">11 / 50 Online</span>
+                              <span>11 / 50 Online</span>
                           </div>
                       </div>
                       <div className="-my-2 -mr-2 md:hidden">
@@ -104,7 +103,7 @@ const Header = () => {
                           <Popover className="relative">
                               {({ open }) => (
                                   <>
-                                      <Popover.Button className="group inline-flex items-center rounded-md text-lg font-bold text-black hover:underline decoration-4 underline-offset-8 decoration-green-500 focus:outline-none">
+                                      <Popover.Button className="group inline-flex items-center rounded-md text-lg font-bold hover:underline decoration-4 underline-offset-8 decoration-green-500 focus:outline-none">
                                           <span>Unsere Server</span>
                                       </Popover.Button>
 
@@ -152,17 +151,17 @@ const Header = () => {
                               )}
                           </Popover>
 
-                          <a href="#" className="text-lg font-bold text-black hover:underline decoration-4 underline-offset-8 decoration-green-500">
+                          <a href="#" className="text-lg font-bold hover:underline decoration-4 underline-offset-8 decoration-green-500">
                               Wiki
                           </a>
-                          <a href="#" className="text-lg font-bold text-black hover:underline decoration-4 underline-offset-8 decoration-green-500">
+                          <a href="#" className="text-lg font-bold hover:underline decoration-4 underline-offset-8 decoration-green-500">
                               Regeln
                           </a>
 
                           <Popover className="relative">
                               {({ open }) => (
                                   <>
-                                      <Popover.Button className="group inline-flex items-center rounded-md text-lg font-bold text-black hover:underline decoration-4 underline-offset-8 decoration-green-500 focus:outline-none">
+                                      <Popover.Button className="group inline-flex items-center rounded-md text-lg font-bold hover:underline decoration-4 underline-offset-8 decoration-green-500 focus:outline-none">
                                           <span>FAQ</span>
                                       </Popover.Button>
 
@@ -219,9 +218,9 @@ const Header = () => {
                           </Popover>
                       </Popover.Group>
                       <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-                          <span className="hidden ld:inline leading-4 mr-4 text-right">Trete unserem <br/>Discord bei!</span>
-                          <button className="inline-block p-1 bg-indigo-500 text-white font-medium text-sm leading-tight uppercase rounded shadow-md hover:bg-indigo-600 hover:shadow-lg focus:bg-indigo-760 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-indigo-700 active:shadow-lg transition duration-150 ease-in-out">
-                              <RxDiscordLogo className="text-3xl text-white"/>
+                          <span className="hidden md:inline leading-4 mr-4 text-right">Tritt unserem <br/>Discord bei!</span>
+                          <button className="inline-block p-1 bg-black dark:bg-white font-medium text-sm leading-tight uppercase rounded shadow-md hover:bg-indigo-600 hover:shadow-lg focus:bg-indigo-760 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-indigo-700 active:shadow-lg transition duration-150 ease-in-out">
+                              <FaDiscord className="text-3xl text-white dark:text-midnight"/>
                           </button>
                       </div>
                   </div>

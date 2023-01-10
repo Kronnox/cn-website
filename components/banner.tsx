@@ -8,7 +8,7 @@ const HeroPost = () => {
                 <div className="md:pt-32 pt-28 pb-10 bg-black bg-opacity-20 backdrop-blur-sm">
                     <Container>
                         <div className="md:my-24 2xl:mr-96 text-white">
-                            <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8">Willkommen auf <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-600">Cube-Nation</span>!</h1>
+                            <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8">Willkommen auf <span className="text-transparent bg-clip-text bg-gradient-to-r from-cn to-cn-l">Cube-Nation</span>!</h1>
                             <h2 className="text-2xl mt-2 md:mt-0 md:text-4xl font-bold tracking-tighter leading-tight md:pr-8">Dem Minecraft Server mit dem Wohlfühleffekt.</h2>
                             <p className="mt-6 md:mt-12">
                                 Cube-Nation bietet dir mit seinem gut durchdachten und stetig weiterentwickelten Konzept ein Minecraft-Spielerlebnis, das du bald nicht mehr vermissen möchtest. Gemeinsam mit den Spielern haben wir seit 2011 einen der freundlichsten Minecraft-Server im deutschsprachigen Raum entwickelt. Zur Community gehört nicht nur das kompetente Server-Team, sondern selbstverständlich auch jeder einzelne Cube-Nation-Spieler!
@@ -20,7 +20,7 @@ const HeroPost = () => {
                                         type="button"
                                         data-mdb-ripple="true"
                                         data-mdb-ripple-color="light"
-                                        className="inline-block mr-2 px-7 py-3 bg-green-600 text-white font-medium text-sm leading-tight uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out"
+                                        className="inline-block mr-2 px-7 py-3 bg-cn text-black font-medium text-sm leading-tight uppercase rounded shadow-md hover:bg-cn-d hover:shadow-lg focus:bg-cn-d focus:shadow-lg focus:outline-none focus:ring-0 active:bg-cn-d active:shadow-lg transition duration-150 ease-in-out"
                                     > Neu hier?
                                     </button>
                                     <button

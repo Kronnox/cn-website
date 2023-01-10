@@ -4,32 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'accent-1': '#66AC0E',
-        'accent-2': '#4D810B',
-        'accent-7': '#91F514',
-        success: '#0070f3',
-        cyan: '#79FFE1',
-      },
-      spacing: {
-        28: '7rem',
-      },
-      letterSpacing: {
-        tighter: '-.04em',
-      },
-      lineHeight: {
-        tight: 1.2,
-      },
-      fontSize: {
-        '5xl': '2.5rem',
-        '6xl': '2.75rem',
-        '7xl': '4.5rem',
-        '8xl': '6.25rem',
-      },
-      boxShadow: {
-        sm: '0 5px 10px rgba(0, 0, 0, 0.12)',
-        md: '0 8px 30px rgba(0, 0, 0, 0.12)',
+        'midnight': '#16181c',
+        'midnight-600': '#111316',
+        'midnight-700': '#0D0E10',
+        'midnight-900': '#060708',
+        'cn-d': '#5B9A0C',
+        'cn': '#66ac0e',
+        'cn-l': '#91f514',
       },
     },
   },
   plugins: [],
+  darkMode: ['media'],
 }

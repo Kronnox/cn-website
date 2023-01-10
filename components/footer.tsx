@@ -1,9 +1,10 @@
 import Container from './container'
 import { EXAMPLE_PATH } from '../lib/constants'
+import {AiFillHeart} from "react-icons/ai";
 
 const Footer = () => {
   return (
-      <footer className="text-center bg-slate-900 text-white">
+      <footer className="text-center bg-slate-900 text-white dark:bg-midnight-700">
         <Container>
           <div className="flex justify-center p-6">
             <a href="#!" type="button"
@@ -79,8 +80,12 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="text-center p-4 bg-slate-900">
-            © 2022 Copyright <a className="text-whitehite" href="https://cube-nation.de/">Cube-Nation</a>. We are not affiliated with Mojang AB.
+          <div className="text-center p-4">
+            Gecraftet mit <AiFillHeart className="inline ml-0.5 mb-1 text-red-500"/>.
+          </div>
+
+          <div className="text-center pb-4 text-slate-700 dark:text-neutral-700 text-sm">
+            © 2022 Copyright <a href="https://cube-nation.de/">Cube-Nation</a>. We are not affiliated with Mojang AB.
           </div>
         </Container>
       </footer>
