@@ -76,7 +76,7 @@ const Header = () => {
               <div className="mx-auto">
                   <div className={`flex items-center justify-between py-5 md:justify-start md:space-x-10 cartoon trasition ease-in-out duration-500`}>
                       <div className="flex justify-start lg:w-0 lg:flex-1">
-                          <a href="#">
+                          <a href="/">
                               <span className="sr-only">Cube-Nation</span>
                               <img
                                   className="w-10 h-10"
@@ -154,7 +154,7 @@ const Header = () => {
                           <a href="#" className="text-lg font-bold hover:underline decoration-4 underline-offset-8 decoration-green-500">
                               Wiki
                           </a>
-                          <a href="#" className="text-lg font-bold hover:underline decoration-4 underline-offset-8 decoration-green-500">
+                          <a href="/regeln" className="text-lg font-bold hover:underline decoration-4 underline-offset-8 decoration-green-500">
                               Regeln
                           </a>
 
